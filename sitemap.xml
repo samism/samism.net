@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+<url>
+  <loc>http://samism.net/</loc>
+  <lastmod>2013-12-23T12:50:08+00:00</lastmod>
+</url>
+<url>
+  <loc>http://samism.net/blog/</loc>
+</url>
+<url>
+  <loc>http://samism.net/ztd/</loc>
+  <lastmod>2013-12-23T12:33:36+00:00</lastmod>
+</url>
+<url>
+  <loc>http://samism.net/blog/sample-page/</loc>
+</url>
+<url>
+  <loc>http://samism.net/blog/first-post-on-the-blog/</loc>
+</url>
+<url>
+  <loc>http://samism.net/blog/author/samism/</loc>
+</url>
+<url>
+  <loc>http://samism.net/blog/category/uncategorized/</loc>
+</url>
+<url>
+  <loc>http://samism.net/blog/tag/first-post-on-the-blog/</loc>
+</url>
+<url>
+  <loc>http://samism.net/blog/tag/ismail/</loc>
+</url>
+<url>
+  <loc>http://samism.net/blog/tag/sameer/</loc>
+</url>
+<url>
+  <loc>http://samism.net/blog/tag/wordpress/</loc>
+</url>
+</urlset>

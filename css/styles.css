@@ -1,0 +1,227 @@
+/*      google font         */
+
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Open Sans Light'), local('OpenSans-Light'), url(http://themes.googleusercontent.com/static/fonts/opensans/v6/DXI1ORHCpsQm3Vp6mXoaTaRDOzjiPcYnFooOUGCOsRk.woff) format('woff');
+}
+
+/* ------------------------- */
+
+canvas#clouds { 
+    position: absolute; top: 0;
+}
+
+div#main-wrapper {
+    width: 960px;
+}
+
+section#head {
+    font-size: 1.5em;
+    font-family: 'Courier New', Courier, monospace;
+    width: 250px;
+    height: 100%;
+    margin: 0;
+    padding: 25px 0 0 15px;
+    position: fixed;
+}
+
+section#head a.email {
+    font-size: 1.15em;
+    color:black;
+    text-decoration: none;
+    border-bottom: 1px dotted grey;
+    margin-left: 12px;
+}
+
+section#head a.big-link {
+    font-size: 0.75em;
+    display: block;
+    margin-top: 10px;
+    padding: 0;
+    text-align: center;
+}
+
+section#head a.github {
+    display: none;
+}
+
+section#head nav { margin-top: 50px;}
+
+section#head nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    font-size: 0.5em;
+    width: 250px;
+}
+
+section#head nav ul li {
+    margin-top: 5px;
+} 
+
+section#head nav ul li:not(.hr):before {
+    content: "> ";
+} 
+
+hr, .hr {
+    clear: both;
+    margin: 0;
+    border: 0;
+    height: 0;
+    border-top: 1px solid #999;
+}
+
+div#social-container { 
+    height: 65px;
+    width: 230px;
+    border-radius: 5px;
+    margin: 30px 5px 30px 5px;
+}
+
+div#social-container a.social {
+    height: 32px;
+    width: 32px;
+    display: inline-block;
+    border: 1px solid gray;
+    border-radius: 7px;
+}
+
+div#social-container a.social:hover {
+    background-position: 0 32px;
+}
+
+div#social-container a#fb { background-image: url('../img/hidra/facebook.png'); }
+div#social-container a#twitter { background-image: url('../img/hidra/twitter.png'); }
+div#social-container a#skype { background-image: url('../img/hidra/skype.png'); }
+div#social-container a#yt { background-image: url('../img/hidra/youtube.png'); }
+div#social-container a#linkedin { background-image: url('../img/hidra/linkedin.png');}
+
+div#content {
+    position: relative;
+    margin: 150px 0 20px 275px;
+    height: 100%;
+    min-width: 1009px;
+}
+
+div#content .content-block ul {
+    float: left;
+    margin-top: 10px;
+    margin-left: 5px;
+    padding: 0px 15px 15px 5px;
+    list-style-type: none;
+}
+
+div#content .content-block ul li {
+    padding: 10px 4px 10px 4px;
+    font-family: "Open Sans", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+    text-align: center;
+}
+
+div#content .content-block ul li a {
+    display: block;
+}
+
+div#content .content-block ul li a.multi {
+    display: inline;
+}
+
+div#content .content-block ul li:nth-child(odd){
+    background-color: #F0F0F0;
+}
+
+div#content .content-block .detail  { 
+    float: left;
+    border-right: 1px solid #999;
+    padding: 5px 10px 75px 0;
+    height: 100%;
+}
+
+div#content .content-block .detail img {
+    display: block;
+    border: 1px solid #999;
+    padding: 5px;
+    margin: 0 auto;
+}
+
+div#content .content-block .detail figcaption { 
+    text-align: center;
+    font-family: "Open Sans", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+    padding-bottom: 15px;
+}
+
+div#content .content-block .detail figcaption h2 { font-weight: 300; }
+
+footer {
+    clear: both;
+    width: 100%;
+    text-align: center;
+    font-size: 0.75em;
+    font-family: 'Courier';
+    margin-bottom: 10px;
+}
+
+/*      Hide right-side links by default to account for small screens. Show with JS     */
+
+/*div#content {
+    min-width: 100%;
+}
+
+div#content .content-block ul {
+    display: none;
+}
+
+div#content .content-block .detail {
+    float: none;
+    border: 0;
+}
+*/
+
+
+/*----------- ----------- ----------- ----------- ----------- ----------- ----------- */
+
+/*      media queries to make page responsive (enough)      */
+
+/* Smartphones (portrait) ----------- */
+@media only screen and (max-width : 320px) {
+    canvas { display: none; }
+
+    div#main-wrapper {
+        width: 100%;
+    }
+
+    section#head {
+        position: static;
+        margin: 0 auto;
+        width: 100%;
+        font-size: 3em;
+    }
+
+    section#head a.big-link-github {
+        display: block;
+    }
+
+    div#content {
+        margin: 0 10px 10px 10px;
+        width: 320px;
+    }
+
+    div#content .content-block ul {
+        display: none;
+    }
+
+    div#content .content-block .detail  { 
+        border: 0;
+        float: none;
+        margin: 0 auto;
+    }
+
+    a#github {
+        display: none;
+    }
+
+    section#head a.github {
+        display: block;
+    }
+}
