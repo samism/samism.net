@@ -1,0 +1,9 @@
+User-agent: *
+Disallow: /hidra/
+Disallow: /old-homepage/
+Disallow: /older-homepage/
+Disallow: /oldest-homepage/
+Disallow: /recent-homepage/
+Disallow: /old-stuff/
+Disallow: /css/
+Disallow: /js/

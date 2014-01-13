@@ -1,4 +1,4 @@
-/*      google font         */
+/*      google fonts         */
 
 @font-face {
   font-family: 'Open Sans';
@@ -7,221 +7,184 @@
   src: local('Open Sans Light'), local('OpenSans-Light'), url(http://themes.googleusercontent.com/static/fonts/opensans/v6/DXI1ORHCpsQm3Vp6mXoaTaRDOzjiPcYnFooOUGCOsRk.woff) format('woff');
 }
 
+@font-face {
+  font-family: 'Nixie One';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Nixie One'), local('NixieOne-Regular'), url(http://themes.googleusercontent.com/static/fonts/nixieone/v4/gQ0PT3rPU_Et2ExNz-ahmrO3LdcAZYWl9Si6vvxL-qU.woff) format('woff');
+}
+
 /* ------------------------- */
 
-canvas#clouds { 
-    position: absolute; top: 0;
+canvas {
+    position: absolute;
+    top: 0;
+    z-index: -1000000;
 }
 
-div#main-wrapper {
+#main-wrapper {
     width: 960px;
+    margin: 0 auto;
+    margin-top: 40px;
+    margin-bottom: 50px;
 }
 
-section#head {
+#small-head {
     font-size: 1.5em;
-    font-family: 'Courier New', Courier, monospace;
-    width: 250px;
-    height: 100%;
-    margin: 0;
-    padding: 25px 0 0 15px;
-    position: fixed;
+    background-image: url('../img/me1.png');
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
-section#head a.email {
-    font-size: 1.15em;
-    color:black;
-    text-decoration: none;
-    border-bottom: 1px dotted grey;
-    margin-left: 12px;
-}
-
-section#head a.big-link {
-    font-size: 0.75em;
-    display: block;
-    margin-top: 10px;
-    padding: 0;
+#small-head .divider {
     text-align: center;
 }
 
-section#head a.github {
-    display: none;
-}
-
-section#head nav { margin-top: 50px;}
-
-section#head nav ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    font-size: 0.5em;
-    width: 250px;
-}
-
-section#head nav ul li {
-    margin-top: 5px;
-} 
-
-section#head nav ul li:not(.hr):before {
-    content: "> ";
-} 
-
-hr, .hr {
-    clear: both;
-    margin: 0;
+#small-head .divider hr {
+    width: 12em;
+    margin-top: 1em;
     border: 0;
-    height: 0;
-    border-top: 1px solid #999;
+    height: 1px;
+    background-image: -webkit-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0)); 
+    background-image:    -moz-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0)); 
+    background-image:     -ms-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0)); 
+    background-image:      -o-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0)); 
 }
 
-div#social-container { 
-    height: 65px;
-    width: 230px;
-    border-radius: 5px;
-    margin: 30px 5px 30px 5px;
-}
-
-div#social-container a.social {
-    height: 32px;
-    width: 32px;
-    display: inline-block;
-    border: 1px solid gray;
-    border-radius: 7px;
-}
-
-div#social-container a.social:hover {
-    background-position: 0 32px;
-}
-
-div#social-container a#fb { background-image: url('../img/hidra/facebook.png'); }
-div#social-container a#twitter { background-image: url('../img/hidra/twitter.png'); }
-div#social-container a#skype { background-image: url('../img/hidra/skype.png'); }
-div#social-container a#yt { background-image: url('../img/hidra/youtube.png'); }
-div#social-container a#linkedin { background-image: url('../img/hidra/linkedin.png');}
-
-div#content {
-    position: relative;
-    margin: 150px 0 20px 275px;
-    height: 100%;
-    min-width: 1009px;
-}
-
-div#content .content-block ul {
+#small-head .divider .left {
     float: left;
-    margin-top: 10px;
-    margin-left: 5px;
-    padding: 0px 15px 15px 5px;
-    list-style-type: none;
 }
 
-div#content .content-block ul li {
-    padding: 10px 4px 10px 4px;
-    font-family: "Open Sans", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+#small-head .divider .right {
+    float: right;
+}
+
+#small-head a { 
+    text-decoration: none; 
+    color: black; 
+    cursor: pointer;
+}
+
+#small-head h1 {
     text-align: center;
-}
-
-div#content .content-block ul li a {
-    display: block;
-}
-
-div#content .content-block ul li a.multi {
+    font-family: 'Nixie One', sans-serif;
+    font-weight: 400;
+    margin: 0;
+    padding: 0;
     display: inline;
 }
 
-div#content .content-block ul li:nth-child(odd){
+#small-head .links {
+    margin-top: 225px;
+    position: relative;
+    left: -15px;
+}
+
+#small-head .links ul {
+    text-align: center;
+    font-size: 0.5em;
+    font-family: georgia;
+}
+
+#small-head .links ul li {
+    display: inline;
+}
+
+#small-head .links ul li a:hover {
+    color: navy;
+}
+
+#small-head img {
+    height: 165px;
+    width: 165px;
+}
+
+#content {
+    margin-top: 100px;
+    position: relative;
+}
+
+#content hr {
+    border: 0;
+    border-top: 1px solid #999;
+    margin: 0;
+}
+
+#content .content-block {
+    margin-top: -5px;
+    padding-top: 5px;
+    overflow: hidden;
+}
+
+#content .content-block ul {
+    overflow: hidden;
+    margin: 0 auto;
+    margin-top: 5px;
+    padding: 0px 0px 15px 5px;
+    list-style-type: none;
+}
+
+#content .content-block ul li {
+    padding: 10px 4px 10px 4px;
+    font-family: "Open Sans", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+    text-align: center;
+    width: 100%;
+}
+
+#content .content-block ul li a {
+    display: block;
+}
+
+#content .content-block ul li a.multi {
+    display: inline;
+}
+
+#content .content-block ul li:nth-child(odd){
     background-color: #F0F0F0;
 }
 
-div#content .content-block .detail  { 
+#content .content-block .detail  { 
     float: left;
     border-right: 1px solid #999;
-    padding: 5px 10px 75px 0;
-    height: 100%;
+    padding: 0px 10px 75px 0;
+    min-width: 50%;
 }
 
-div#content .content-block .detail img {
+#content .content-block .detail img {
     display: block;
     border: 1px solid #999;
     padding: 5px;
     margin: 0 auto;
 }
 
-div#content .content-block .detail figcaption { 
+#content .content-block .detail figcaption { 
     text-align: center;
     font-family: "Open Sans", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
     padding-bottom: 15px;
 }
 
-div#content .content-block .detail figcaption h2 { font-weight: 300; }
+#content .content-block .detail figcaption h3 { 
+    font-weight: 300;
+}
 
 footer {
-    clear: both;
-    width: 100%;
+    position: absolute;
+    bottom: -45px;
+    right: 43%;
     text-align: center;
     font-size: 0.75em;
-    font-family: 'Courier';
-    margin-bottom: 10px;
+    font-family: georgia;
 }
-
-/*      Hide right-side links by default to account for small screens. Show with JS     */
-
-/*div#content {
-    min-width: 100%;
-}
-
-div#content .content-block ul {
-    display: none;
-}
-
-div#content .content-block .detail {
-    float: none;
-    border: 0;
-}
-*/
-
 
 /*----------- ----------- ----------- ----------- ----------- ----------- ----------- */
 
 /*      media queries to make page responsive (enough)      */
 
+
+/* stuff between smartphones and desktops */
+@media only screen and (min-width: 320px) and (max-width : 1023px) {
+}
+
 /* Smartphones (portrait) ----------- */
 @media only screen and (max-width : 320px) {
-    canvas { display: none; }
-
-    div#main-wrapper {
-        width: 100%;
-    }
-
-    section#head {
-        position: static;
-        margin: 0 auto;
-        width: 100%;
-        font-size: 3em;
-    }
-
-    section#head a.big-link-github {
-        display: block;
-    }
-
-    div#content {
-        margin: 0 10px 10px 10px;
-        width: 320px;
-    }
-
-    div#content .content-block ul {
-        display: none;
-    }
-
-    div#content .content-block .detail  { 
-        border: 0;
-        float: none;
-        margin: 0 auto;
-    }
-
-    a#github {
-        display: none;
-    }
-
-    section#head a.github {
-        display: block;
-    }
 }
