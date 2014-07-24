@@ -3,3 +3,5 @@
 !js/*
 !img/*
 *.json
+*.iml
+.DS_Store
