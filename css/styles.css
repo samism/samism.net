@@ -191,12 +191,30 @@ footer {
 /*----------- ----------- ----------- ----------- ----------- ----------- ----------- */
 
 /*      media queries to make page responsive (enough)      */
-
-
-/* stuff between smartphones and desktops */
-@media only screen and (min-width: 320px) and (max-width : 1023px) {
-}
-
 /* Smartphones (portrait) ----------- */
 @media only screen and (max-width : 320px) {
+    body, #main-wrapper {
+        max-width: 320px;
+    }
+    .left, .right, #content .content-block ul {
+        display: none;
+    }
+
+    #content .content-block .detail {
+        max-width: 320px;
+        padding-bottom: 55px;
+        padding-left: 5px;
+        padding-right: 5px;
+        margin: 0;
+    }
+
+    img {
+        max-width: 96%;
+    }
+
+    footer {
+        position: static;
+        margin: 0;
+        padding: 0;
+    }
 }
