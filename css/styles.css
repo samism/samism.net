@@ -72,6 +72,18 @@ canvas {
     margin: 0;
     padding: 0;
     display: inline;
+
+    /* animate.css properties */
+    -vendor-animation-duration: 3s;
+    -vendor-animation-delay: 250ms;
+    -vendor-animation-iteration-count: infinite;
+    -moz-animation-duration: 3s;
+    -moz-animation-delay: 250ms;
+    -moz-animation-iteration-count: infinite;
+    -webkit-animation-duration: 3s;
+    -webkit-animation-delay: 250ms;
+    -webkit-animation-iteration-count: infinite;
+
 }
 
 #small-head .links {

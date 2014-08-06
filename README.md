@@ -8,3 +8,4 @@ The source code to my current homepage.
 2. Nicolas Gallagher's [normalize.css](https://github.com/necolas/normalize.css)
 3. [jQuery](https://github.com/jquery/jquery). Surprise right?
 4. clouds.js from [Joey](https://github.com/jvq2)
+5. Daniel Eden's [animate.css](https://github.com/daneden/animate.css)

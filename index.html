@@ -11,6 +11,7 @@
         <link rel="icon" type="image/x-icon" href="favicon.ico">
         <link rel=”apple-touch-icon” href="favicon.ico">
         <link rel="stylesheet" href="css/normalize.min.css">
+        <link rel="stylesheet" href="css/animate.min.css">
         <link rel="stylesheet" href="css/styles.css">
     </head>
     <body>
@@ -21,7 +22,11 @@
             <![endif]-->
             <header id="small-head">
                 <div class="divider">
-                    <hr class="left"><a title="click twice to learn more about me" id="show" href="#content"><h1>Sameer Ismail</h1></a><hr class="right">
+                    <hr class="left">
+                        <a title="click twice to learn more about me" id="show" href="#content">
+                            <h1 id="name" class="animated flash">Sameer Ismail</h1>
+                        </a>
+                    <hr class="right">
                 </div>
                 <div class="links">
                     <ul title="Important stuff" class="important">
@@ -30,7 +35,7 @@
                         <li><a href="http://blog.samism.net/">blog</a></li>
                     </ul>
                     <ul title="Projects" class="projects">
-                        <li><a href="https://github.com/samism/portnotes/">Portnotes</a></li> &middot; 
+                        <li><a href="https://github.com/samism/portnotes/">Portnotes</a></li> &middot;
                         <li><a href="https://github.com/samism/invalidity.py">invalidity.py</a></li> &middot;
                         <li><a href="https://github.com/samism/percival">Percival (IRC bot)</a></li> &middot;
                         <li><a href="ztd/">Zombie Tower Defense</a> <a href="https://github.com/samism/ztd">(source)</a></li>
@@ -155,6 +160,7 @@
             </div>
             <script>
                 //hide #content as fast as possible to avoid flicker effect
+                //sans-jquery here because its not loaded yet because
                 //even when loading jquery from google or a cdn, latency and the actual download varies
                 document.getElementById('content').style.display = 'none';
             </script>
@@ -171,6 +177,7 @@
 
                     if($('#content').css('display') === 'none'){
                         $('#content').hide().fadeIn('slow');
+                        $('#name').removeClass();
                     } else {
                         $('html, body').animate({
                             scrollTop: $("#content").offset().top
@@ -182,6 +189,8 @@
 
                 //credits to joey - http://joey.teraf.in
                 $(function(){
+                    //$("#name").addClass("animated flash");
+
                     window.requestAnimFrame = window.requestAnimFrame || (function(){
                         return window.requestAnimationFrame || 
                             window.webkitRequestAnimationFrame  || 
