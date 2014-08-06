@@ -200,6 +200,12 @@ footer {
         display: none;
     }
 
+    #content {
+        max-width: 320px;
+        height: 100%;
+        margin: 0 auto;
+    }
+
     #content .content-block .detail {
         max-width: 320px;
         padding-bottom: 55px;
