@@ -239,10 +239,10 @@ AddDefaultCharset utf-8
     RewriteCond %{HTTPS} !=on
     RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
     RewriteRule ^ http://%1%{REQUEST_URI} [R=301,L]
-    RewriteCond %{HTTP_HOST} ^162\.243\.231\.223
-    RewriteRule (.*) http://samism.net/$1 [R=301,L]
-</IfModule>
 
+    RewriteCond %{HTTP_HOST} ^162\.243\.231\.223
+    RewriteRule ^ http://%1%{REQUEST_URI} [R=301,L]
+</IfModule>
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 # Option 2: rewrite example.com ??? www.example.com
@@ -474,9 +474,9 @@ AddDefaultCharset utf-8
 # IMPORTANT: Remove the `includeSubDomains` optional directive if the subdomains
 # are not using HTTPS.
 
-# <IfModule mod_headers.c>
-#    Header set Strict-Transport-Security "max-age=16070400; includeSubDomains"
-# </IfModule>
+<IfModule mod_headers.c>
+   Header set Strict-Transport-Security "max-age=16070400; includeSubDomains"
+</IfModule>
 
 # ------------------------------------------------------------------------------
 # | Server software information                                                |
