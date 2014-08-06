@@ -664,3 +664,6 @@ FileETag None
 #        SetOutputFilter INCLUDES
 #    </FilesMatch>
 # </IfModule>
+
+ # Disable server signature
+ ServerSignature Off
