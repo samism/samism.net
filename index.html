@@ -9,7 +9,6 @@
         <meta name="google-site-verification" content="W2mKRQDCkwKOKUS3E6HgjqNIT3hrcbUmpngEVS3AZSM" />
 
         <link rel="icon" type="image/x-icon" href="favicon.ico">
-        <link rel=”apple-touch-icon” href="favicon.ico">
         <link rel="stylesheet" href="css/normalize.min.css">
         <link rel="stylesheet" href="css/animate.min.css">
         <link rel="stylesheet" href="css/styles.css">
@@ -168,29 +167,24 @@
             <!--<script src="js/vendor/jquery-1.10.1.min.js"></script> -->
             <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
             <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.1.min.js"><\/script>')</script>
-            <script src="smooth-scroll.js"></script>
             <script src="js/clouds.min.js"></script>
             <script>
-                //show #content, prevent extra width space from display: inline;
-                $('#show').click(function(e){
-                    e.preventDefault();
-
-                    if($('#content').css('display') === 'none'){
-                        $('#content').hide().fadeIn('slow');
-                        $('#name').removeClass();
-                    } else {
-                        $('html, body').animate({
-                            scrollTop: $("#content").offset().top
-                        }, 1000);
-                    }
-
-                    return false;
-                });
-
-                //credits to joey - http://joey.teraf.in
                 $(function(){
-                    //$("#name").addClass("animated flash");
+                    //show #content, prevent extra width space from display: inline;
+                    $('#show').click(function(e){
+                        e.preventDefault();
 
+                        if($('#content').css('display') === 'none'){
+                            $('#content').hide().fadeIn('slow');
+                            $('#name').removeClass(); //prevent animation when clicked
+                        } else {
+                            $('html, body').animate({
+                                scrollTop: $("#content").offset().top //scroll down
+                            }, 1000);
+                        }
+                    });
+
+                    //credits to joey for this part - http://joey.teraf.in
                     window.requestAnimFrame = window.requestAnimFrame || (function(){
                         return window.requestAnimationFrame || 
                             window.webkitRequestAnimationFrame  || 
@@ -239,9 +233,6 @@
                     frame();
                 });
             </script>
-            <!--
-            <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script> 
-            -->
         </div>
     </body>
 </html>
