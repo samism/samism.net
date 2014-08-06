@@ -239,6 +239,8 @@ AddDefaultCharset utf-8
     RewriteCond %{HTTPS} !=on
     RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
     RewriteRule ^ http://%1%{REQUEST_URI} [R=301,L]
+    RewriteCond %{HTTP_HOST} ^162\.243\.231\.223
+    RewriteRule (.*) http://samism.net/$1 [R=301,L]
 </IfModule>
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
