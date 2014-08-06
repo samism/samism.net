@@ -196,6 +196,11 @@ footer {
     body, #main-wrapper {
         max-width: 320px;
     }
+
+    #small-head h1 {
+        font-size: 1.5em;
+    }
+
     .left, .right, #content .content-block ul {
         display: none;
     }
