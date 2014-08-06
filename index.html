@@ -237,7 +237,7 @@
                     w.resize(function(){
                         var ww = w.width();
                         
-                        $('#clouds').attr('width', (ww <= 960 ? 960 : ww));
+                        $('#clouds').attr('width', ww/*(ww <= 960 ? 960 : ww)*/);
                             clouds_ctx.w = clouds_ctx.canvas.width;
                         }).trigger('resize');
                     
