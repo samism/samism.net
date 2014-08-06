@@ -204,6 +204,7 @@ footer {
         max-width: 320px;
         height: 100%;
         margin: 0 auto;
+        float: none;
     }
 
     #content .content-block .detail {
@@ -213,6 +214,7 @@ footer {
         padding-right: 5px;
         margin: 0;
         border-right: 0;
+        float: none;
     }
 
     img {
