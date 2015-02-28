@@ -5,3 +5,4 @@
 *.json
 *.iml
 .DS_Store
+*.java
