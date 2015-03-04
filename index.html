@@ -157,12 +157,6 @@
                     <span>&copy; 2015 Sameer Ismail</span>
                 </footer>
             </div>
-            <script>
-                //hide #content as fast as possible to avoid flicker effect
-                //sans-jquery here because its not loaded yet because
-                //even when loading jquery from google or a cdn, latency and the actual download varies
-                document.getElementById('content').style.display = 'none';
-            </script>
             <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
             <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.1.min.js"><\/script>')</script>
             <script src="js/clouds.min.js"></script>
@@ -172,14 +166,9 @@
                     $('#show').click(function(e){
                         e.preventDefault();
 
-                        if($('#content').css('display') === 'none'){
-                            $('#content').hide().fadeIn('slow');
-                            $('#name').removeClass(); //prevent animation when clicked
-                        } else {
-                            $('html, body').animate({
-                                scrollTop: $("#content").offset().top //scroll down
-                            }, 1000);
-                        }
+                        $('html, body').animate({
+                            scrollTop: $("#content").offset().top //scroll down
+                        }, 1000);
                     });
 
                     //slightly obfuscate email
